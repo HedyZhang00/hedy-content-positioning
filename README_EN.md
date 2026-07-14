@@ -4,9 +4,9 @@ An interview-driven Agent Skill for solo business owners who need a clear, testa
 
 > Status: `v0.2.5` beta. Repository structure, format, encoding, and privacy checks pass. Both example cards have been regenerated with the fixed palette, type scale, spacing system, component library, and semantic color rules. Real-user behavioral validation is still being collected.
 
-## What it does
+## What you get
 
-It helps creators with real expertise or an existing business turn evidence, audience needs, business goals, and sustainable expression into:
+After the interview, evidence review, and positioning choice, the Skill produces:
 
 - one concise content positioning card;
 - one 7-day validation action card;
@@ -14,16 +14,16 @@ It helps creators with real expertise or an existing business turn evidence, aud
 - a lightweight business-connection hypothesis;
 - retain, adjust, or downgrade/stop decision rules.
 
-The result is a testable “Content Positioning Hypothesis V1.0,” not a permanent identity claim. Version 0.2 also includes conditional audits for existing accounts and long-term expression energy.
-
-## Final output example
-
-After the interview, evidence review, and positioning choice, the Skill produces the two cards below by default. They come from one real self-test; each user receives different content based on their business, experience, audience, and evidence.
-
 <p align="center">
   <a href="assets/examples/hedy-content-positioning-card.png"><img src="assets/examples/hedy-content-positioning-card.png" alt="Content positioning card example" width="48%"></a>
   <a href="assets/examples/hedy-7-day-validation-card.png"><img src="assets/examples/hedy-7-day-validation-card.png" alt="7-day validation card example" width="48%"></a>
 </p>
+
+These cards come from one real self-test. Each user receives different content based on their business, experience, audience, and evidence. The result is a testable “Content Positioning Hypothesis V1.0,” not a permanent identity claim.
+
+## What it does
+
+It helps creators with real expertise or an existing business turn evidence, audience needs, business goals, and sustainable expression into one clear content direction. Version 0.2 also includes conditional audits for existing accounts and long-term expression energy.
 
 ## Who it is for
 
