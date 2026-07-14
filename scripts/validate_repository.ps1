@@ -57,6 +57,7 @@ if ($unexpected.Count -gt 0) {
 
 $skill = Get-Content -LiteralPath (Join-Path $skillRoot 'SKILL.md') -Encoding UTF8 -Raw
 $yaml = Get-Content -LiteralPath (Join-Path $skillRoot 'agents/openai.yaml') -Encoding UTF8 -Raw
+$outputTemplate = Get-Content -LiteralPath (Join-Path $skillRoot 'references/output-template.md') -Encoding UTF8 -Raw
 $publicTextFiles = Get-ChildItem -LiteralPath $repoRoot -Recurse -File |
     Where-Object {
         $_.FullName -notmatch '\\.git(\\|$)' -and
@@ -83,6 +84,11 @@ $checks = @(
     @{ Name = 'visual dimensions'; Pass = $joinedText -match '1080 × 1620' },
     @{ Name = 'editorial visual style'; Pass = $joinedText -match 'Editorial Infographic' -and $joinedText -match '编号分区' },
     @{ Name = 'reference card styling'; Pass = $joinedText -match '圆角编号' -and $joinedText -match '白色信息框' -and $joinedText -match '浅色总结区' },
+    @{ Name = 'design system palette'; Pass = @('#F6F2E8', '#1A1A1A', '#D7E85C', '#F4B4C6', '#F0A868', '#BEB0E8', '#F0F4D0', '#8A8574') | ForEach-Object { $outputTemplate -match [regex]::Escape($_) } | Where-Object { -not $_ } | Measure-Object | Select-Object -ExpandProperty Count | ForEach-Object { $_ -eq 0 } },
+    @{ Name = 'fixed color semantics'; Pass = $outputTemplate -match '柠青.*核心' -and $outputTemplate -match '暖粉.*人.*关系' -and $outputTemplate -match '杏橙.*风险' -and $outputTemplate -match '雾紫.*方法.*系统' },
+    @{ Name = 'design system type scale'; Pass = $outputTemplate -match '50px' -and $outputTemplate -match '26px' -and $outputTemplate -match '19px.*1\.75' -and $outputTemplate -match '15px' },
+    @{ Name = 'design system spacing'; Pass = $outputTemplate -match '56.?60px' -and $outputTemplate -match '72px.*76px' -and $outputTemplate -match '60px 对齐' },
+    @{ Name = 'design system limits'; Pass = $outputTemplate -match '最多 5 个模块' -and $outputTemplate -match '一处黑底反白' -and $outputTemplate -match '正文单段不超过 2 行' },
     @{ Name = 'summary block'; Pass = $joinedText -match '总结 / SUMMARY' },
     @{ Name = 'readme card images'; Pass = $joinedText -match 'assets/examples/hedy-content-positioning-card.png' -and $joinedText -match 'assets/examples/hedy-7-day-validation-card.png' },
     @{ Name = 'seven-day validation'; Pass = $joinedText -match '7 天验证' },

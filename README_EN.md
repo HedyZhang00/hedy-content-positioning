@@ -2,7 +2,7 @@
 
 An interview-driven Agent Skill for solo business owners who need a clear, testable content positioning.
 
-> Status: `v0.2.2` beta. Repository structure, format, encoding, and privacy checks pass. The knowledge-card visuals now follow the new editorial layout reference. Real-user behavioral validation is still being collected.
+> Status: `v0.2.3` beta. Repository structure, format, encoding, and privacy checks pass. Knowledge cards now follow a fixed palette, type scale, spacing system, component library, and semantic color rules. Real-user behavioral validation is still being collected.
 
 ## What it does
 
