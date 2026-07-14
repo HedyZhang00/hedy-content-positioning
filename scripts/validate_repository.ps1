@@ -58,6 +58,9 @@ if ($unexpected.Count -gt 0) {
 $skill = Get-Content -LiteralPath (Join-Path $skillRoot 'SKILL.md') -Encoding UTF8 -Raw
 $yaml = Get-Content -LiteralPath (Join-Path $skillRoot 'agents/openai.yaml') -Encoding UTF8 -Raw
 $outputTemplate = Get-Content -LiteralPath (Join-Path $skillRoot 'references/output-template.md') -Encoding UTF8 -Raw
+$exampleHtml = Get-Content -LiteralPath (Join-Path $repoRoot 'assets/examples/hedy-content-positioning-cards.html') -Encoding UTF8 -Raw
+$card1Html = [regex]::Match($exampleHtml, '(?s)<article class="card" id="card1">.*?</article>').Value
+$card2Html = [regex]::Match($exampleHtml, '(?s)<article class="card" id="card2">.*?</article>').Value
 $publicTextFiles = Get-ChildItem -LiteralPath $repoRoot -Recurse -File |
     Where-Object {
         $_.FullName -notmatch '\\.git(\\|$)' -and
@@ -89,6 +92,9 @@ $checks = @(
     @{ Name = 'design system type scale'; Pass = $outputTemplate -match '50px' -and $outputTemplate -match '26px' -and $outputTemplate -match '19px.*1\.75' -and $outputTemplate -match '15px' },
     @{ Name = 'design system spacing'; Pass = $outputTemplate -match '56.?60px' -and $outputTemplate -match '72px.*76px' -and $outputTemplate -match '60px 对齐' },
     @{ Name = 'design system limits'; Pass = $outputTemplate -match '最多 5 个模块' -and $outputTemplate -match '一处黑底反白' -and $outputTemplate -match '正文单段不超过 2 行' },
+    @{ Name = 'example card module limit'; Pass = ([regex]::Matches($card1Html, '<section class="section">').Count -le 5) -and ([regex]::Matches($card2Html, '<section class="section">').Count -le 5) },
+    @{ Name = 'example card single action bar'; Pass = ([regex]::Matches($card1Html, 'class="day-action"').Count -le 1) -and ([regex]::Matches($card2Html, 'class="day-action"').Count -le 1) },
+    @{ Name = 'example card design scale'; Pass = $exampleHtml -match 'padding:\s*72px 76px 0' -and $exampleHtml -match 'h1\s*\{(?s:.*?)font-size:\s*50px' -and $exampleHtml -match '\.section\s*\{\s*margin-bottom:\s*(56|60)px' },
     @{ Name = 'summary block'; Pass = $joinedText -match '总结 / SUMMARY' },
     @{ Name = 'readme card images'; Pass = $joinedText -match 'assets/examples/hedy-content-positioning-card.png' -and $joinedText -match 'assets/examples/hedy-7-day-validation-card.png' },
     @{ Name = 'seven-day validation'; Pass = $joinedText -match '7 天验证' },
