@@ -1,6 +1,6 @@
 # 一人公司内容定位师
 
-> 帮助已有专业能力或业务基础、却不知道该在网上持续讲什么的一人公司，通过深度采访形成一个可验证的内容定位假设、三条内容主线和 7 天验证计划。
+> 帮助已有专业能力或业务基础、却不知道该在社交媒体上持续分享什么内容的一人公司，通过深度采访形成一个可验证的内容定位假设、三条内容主线和 7 天验证计划。
 
 An interview-driven Agent Skill for solo business owners who need a clear, testable content positioning. It turns real expertise, audience evidence, and business goals into one positioning hypothesis, three content pillars, and a 7-day validation plan.
 
