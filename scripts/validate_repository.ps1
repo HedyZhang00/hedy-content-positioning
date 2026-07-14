@@ -68,7 +68,7 @@ $checks = @(
     @{ Name = 'three content pillars'; Pass = $joinedText -match '三条内容主线' },
     @{ Name = 'seven-day validation'; Pass = $joinedText -match '7 天验证' },
     @{ Name = 'confidence levels'; Pass = $joinedText -match '高、中、待验证' },
-    @{ Name = 'display name'; Pass = $yaml -match 'display_name:\s*"超级个体内容定位师"' },
+    @{ Name = 'display name'; Pass = $yaml -match 'display_name:\s*"一人公司内容定位师"' },
     @{ Name = 'explicit invocation'; Pass = $joinedText -match '\$hedy-content-positioning' },
     @{ Name = 'no placeholders'; Pass = $joinedText -notmatch '(?im)\b(TBD|TODO)\b|待补充|稍后填写' },
     @{ Name = 'no private project'; Pass = $joinedText -notmatch 'Hedy-advisor|AI 人生教练|D:\\GoogleMirror|C:\\Users\\Laptop' },

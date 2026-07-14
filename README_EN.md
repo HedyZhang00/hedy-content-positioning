@@ -1,6 +1,6 @@
 # Hedy Content Positioning
 
-An interview-driven Agent Skill for independent professionals and creators who need a clear, testable content positioning.
+An interview-driven Agent Skill for solo business owners who need a clear, testable content positioning.
 
 > Status: `v0.1.0` beta. Repository structure, format, encoding, and privacy checks pass. Real-user behavioral validation is still being collected.
 
