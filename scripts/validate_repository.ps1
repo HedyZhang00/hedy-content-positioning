@@ -10,7 +10,10 @@ $requiredRepoFiles = @(
     '.gitignore',
     'evals/cases.md',
     'evals/rubric.md',
-    'evals/beta-feedback-template.md'
+    'evals/beta-feedback-template.md',
+    'assets/examples/hedy-content-positioning-cards.html',
+    'assets/examples/hedy-content-positioning-card.png',
+    'assets/examples/hedy-7-day-validation-card.png'
 )
 
 $requiredSkillFiles = @(
@@ -76,11 +79,16 @@ $checks = @(
     @{ Name = 'one core content line'; Pass = $joinedText -match '核心主线' -and $joinedText -match '证明线' -and $joinedText -match '人格与关系线' },
     @{ Name = 'commercial connection hypothesis'; Pass = $joinedText -match '商业连接假设' },
     @{ Name = 'two-card output'; Pass = $joinedText -match '内容定位卡' -and $joinedText -match '7 天验证行动卡' },
+    @{ Name = 'three-by-four visual'; Pass = $joinedText -match '竖版 3:4' },
+    @{ Name = 'visual dimensions'; Pass = $joinedText -match '1200 × 1600' },
+    @{ Name = 'editorial visual style'; Pass = $joinedText -match 'Editorial Infographic' -and $joinedText -match '编号分区' },
+    @{ Name = 'summary block'; Pass = $joinedText -match '总结 / SUMMARY' },
+    @{ Name = 'readme card images'; Pass = $joinedText -match 'assets/examples/hedy-content-positioning-card.png' -and $joinedText -match 'assets/examples/hedy-7-day-validation-card.png' },
     @{ Name = 'seven-day validation'; Pass = $joinedText -match '7 天验证' },
     @{ Name = 'validation signals'; Pass = $joinedText -match '目标用户信号' -and $joinedText -match '商业行动信号' -and $joinedText -match '个人能量信号' },
     @{ Name = 'validation decisions'; Pass = $joinedText -match '保留' -and $joinedText -match '调整' -and $joinedText -match '放弃或降级' },
     @{ Name = 'confidence levels'; Pass = $joinedText -match '高、中、待验证' },
-    @{ Name = 'v0.2 status'; Pass = $joinedText -match 'v0\.2\.0' },
+    @{ Name = 'v0.2 status'; Pass = $joinedText -match 'v0\.2\.\d+' },
     @{ Name = 'display name'; Pass = $yaml -match 'display_name:\s*"一人公司内容定位师"' },
     @{ Name = 'explicit invocation'; Pass = $joinedText -match '\$hedy-content-positioning' },
     @{ Name = 'no placeholders'; Pass = $joinedText -notmatch '(?im)\b(TBD|TODO)\b|待补充|稍后填写' },

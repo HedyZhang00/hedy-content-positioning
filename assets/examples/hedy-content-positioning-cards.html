@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>一人公司内容定位师｜知识卡片示例</title>
+  <style>
+    :root {
+      --paper: #f7f3e9;
+      --ink: #17191d;
+      --muted: #5e6268;
+      --line: #202226;
+      --lime: #d9f254;
+      --pink: #f7becd;
+      --orange: #f6c37a;
+      --lavender: #d9d0f5;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1200px; min-height: 1600px; background: var(--paper); }
+    body {
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "Noto Sans SC", "PingFang SC", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .card {
+      width: 1200px;
+      height: 1600px;
+      overflow: hidden;
+      padding: 76px 82px 64px;
+      background:
+        radial-gradient(circle at 93% 5%, rgba(217, 242, 84, .16), transparent 20%),
+        var(--paper);
+      display: flex;
+      flex-direction: column;
+    }
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: 66px;
+      line-height: 1.08;
+      letter-spacing: -3px;
+      margin: 0 0 17px;
+      font-weight: 900;
+    }
+    .subtitle { font-size: 25px; color: var(--muted); font-weight: 700; }
+    .title-rule { height: 4px; background: var(--line); margin: 28px 0 8px; }
+    .section {
+      border-bottom: 2px solid rgba(32, 34, 38, .82);
+      padding: 22px 0 20px;
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      column-gap: 20px;
+    }
+    .section.compact { padding-top: 17px; padding-bottom: 16px; }
+    .num {
+      width: 60px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--lime);
+      font: 900 22px/1 Arial, sans-serif;
+    }
+    .pink { background: var(--pink); }
+    .orange { background: var(--orange); }
+    .lavender { background: var(--lavender); }
+    h2 { margin: 1px 0 10px; font-size: 28px; line-height: 1.25; font-weight: 900; }
+    p { margin: 0; font-size: 25px; line-height: 1.55; font-weight: 560; }
+    strong { font-weight: 900; }
+    ul { margin: 3px 0 0; padding-left: 1.15em; }
+    li { margin: 4px 0; font-size: 22px; line-height: 1.45; font-weight: 560; }
+    .highlight { background: linear-gradient(transparent 58%, rgba(217, 242, 84, .78) 0); }
+    .pill-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 6px; }
+    .pill { padding: 16px 17px; min-height: 91px; background: rgba(255,255,255,.45); border: 2px solid var(--line); }
+    .pill b { display: block; font-size: 20px; margin-bottom: 5px; }
+    .pill span { font-size: 18px; line-height: 1.4; }
+    .biz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px 25px; }
+    .biz-grid div { font-size: 20px; line-height: 1.42; }
+    .summary {
+      margin-top: auto;
+      background: var(--lime);
+      padding: 25px 30px 27px;
+      border-top: 4px solid var(--line);
+    }
+    .summary-title { font: 900 18px/1 Arial, sans-serif; letter-spacing: 2px; margin-bottom: 12px; }
+    .summary p { font-size: 27px; line-height: 1.42; font-weight: 900; }
+    .days {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 18px;
+      margin-top: 4px;
+    }
+    .day { border-left: 8px solid var(--lime); padding: 7px 0 7px 13px; }
+    .day:nth-child(2), .day:nth-child(6) { border-color: var(--pink); }
+    .day:nth-child(3), .day:nth-child(7) { border-color: var(--orange); }
+    .day:nth-child(4) { border-color: var(--lavender); }
+    .day b { display: block; font: 900 18px/1.2 Arial, sans-serif; margin-bottom: 4px; }
+    .day span { font-size: 18px; line-height: 1.35; font-weight: 650; }
+    .signal-grid, .decision-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .signal, .decision { padding: 14px 14px 15px; border: 2px solid var(--line); min-height: 102px; }
+    .signal b, .decision b { display: block; font-size: 20px; margin-bottom: 6px; }
+    .signal span, .decision span { font-size: 17px; line-height: 1.4; }
+    .decision.keep { background: rgba(217,242,84,.5); }
+    .decision.adjust { background: rgba(246,195,122,.46); }
+    .decision.stop { background: rgba(247,190,205,.43); }
+    .meta { font-size: 18px; color: var(--muted); margin-top: 9px; }
+  </style>
+</head>
+<body>
+  <article class="card" id="card1">
+    <header>
+      <div class="eyebrow">CONTENT POSITIONING</div>
+      <h1>一人公司内容定位卡</h1>
+      <div class="subtitle">内容定位假设 V1.0｜首次真实自测案例</div>
+      <div class="title-rule"></div>
+    </header>
+
+    <section class="section">
+      <div class="num">01</div>
+      <div>
+        <h2>你的定位</h2>
+        <p>帮助刚开始转型个人IP、有自己业务的知识工作者，用<span class="highlight"><strong>高转化选题与内容设计</strong></span>，打通从产品表达、精准获客到微信转化的小红书商业闭环。</p>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="num pink">02</div>
+      <div>
+        <h2>你服务谁</h2>
+        <p>疗愈师、儿童教育师、英语老师等有专业服务，却不知道如何通过小红书获客的知识工作者。</p>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="num orange">03</div>
+      <div>
+        <h2>唯一核心主线</h2>
+        <p><strong>如何让小红书的每一条内容，都为吸引精准客户和业务变现服务。</strong></p>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="num lavender">04</div>
+      <div>
+        <h2>为什么是你</h2>
+        <ul>
+          <li>通过小红书获得 <strong>500位以上</strong> 精准女性客户。</li>
+          <li>跑通过笔记、私信、社群到微信成交的路径。</li>
+          <li>加到微信后的成交转化率约 <strong>60%以上</strong>。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="num">05</div>
+      <div>
+        <h2>内容结构</h2>
+        <div class="pill-grid">
+          <div class="pill"><b>核心主线</b><span>高转化选题与内容获客方法</span></div>
+          <div class="pill"><b>证明线</b><span>案例、内容方法、成交路径与踩坑</span></div>
+          <div class="pill"><b>人格与关系线</b><span>从P图服务到内容咨询的转型思考</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="num pink">06</div>
+      <div>
+        <h2>商业连接假设</h2>
+        <div class="biz-grid">
+          <div><strong>业务：</strong>小红书获客与闭环咨询</div>
+          <div><strong>最小服务：</strong>闭环诊断＋7天内容计划</div>
+          <div><strong>行动：</strong>私信「小红书闭环」</div>
+          <div><strong>置信度：</strong>中</div>
+        </div>
+        <div class="meta">最大待验证假设：知识工作者是否愿意为这套方法付费。</div>
+      </div>
+    </section>
+
+    <footer class="summary">
+      <div class="summary-title">总结 / SUMMARY</div>
+      <p>用“高转化内容”吸引用户，用“小红书商业闭环咨询”完成更深层交付。</p>
+    </footer>
+  </article>
+
+  <article class="card" id="card2">
+    <header>
+      <div class="eyebrow">7-DAY VALIDATION</div>
+      <h1>7天定位验证卡</h1>
+      <div class="subtitle">不继续猜定位，用真实内容验证定位</div>
+      <div class="title-rule"></div>
+    </header>
+
+    <section class="section">
+      <div class="num">01</div>
+      <div>
+        <h2>本轮要验证</h2>
+        <p>知识工作者是否会因为你讨论<span class="highlight"><strong>“小红书高转化内容与商业闭环”</strong></span>，而主动表达问题、私信或预约诊断。</p>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="num pink">02</div>
+      <div>
+        <h2>7天行动</h2>
+        <div class="days">
+          <div class="day"><b>DAY 1｜问题</b><span>为什么有专业能力，反而不知道发什么？</span></div>
+          <div class="day"><b>DAY 2｜证据</b><span>我如何从小红书获得500+精准客户</span></div>
+          <div class="day"><b>DAY 3｜痛点</b><span>每天追选题，为什么仍然没有客户？</span></div>
+          <div class="day"><b>DAY 4｜方法</b><span>产品→内容→精准用户→微信成交</span></div>
+          <div class="day"><b>DAY 5｜案例</b><span>一张前后对比图，为什么能带来成交？</span></div>
+          <div class="day"><b>DAY 6｜观点</b><span>流量高，不等于能够获客</span></div>
+          <div class="day"><b>DAY 7｜行动</b><span>招募3位知识工作者做闭环诊断</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="num orange">03</div>
+      <div>
+        <h2>重点观察</h2>
+        <div class="signal-grid">
+          <div class="signal"><b>目标用户</b><span>是否有疗愈师、教师等讲出具体困难</span></div>
+          <div class="signal"><b>商业行动</b><span>是否有人私信、询价或预约诊断</span></div>
+          <div class="signal"><b>个人能量</b><span>方法、案例、观点中哪类最想继续讲</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="num lavender">04</div>
+      <div>
+        <h2>7天后判断</h2>
+        <div class="decision-grid">
+          <div class="decision keep"><b>保留</b><span>目标用户回应，并出现私信或预约</span></div>
+          <div class="decision adjust"><b>调整</b><span>有流量但人不对，或共鸣后无人行动</span></div>
+          <div class="decision stop"><b>放弃 / 降级</b><span>没人回应，也缺少素材与表达意愿</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="num">05</div>
+      <div>
+        <h2>行动引导</h2>
+        <p>前6天邀请评论和分享真实场景；第7天只设置一个行动：<strong>私信关键词「小红书闭环」预约诊断。</strong></p>
+      </div>
+    </section>
+
+    <footer class="summary">
+      <div class="summary-title">总结 / SUMMARY</div>
+      <p>定位不是想出来的。先用7条内容，验证谁会回应、谁会咨询、你能否持续。</p>
+    </footer>
+  </article>
+
+  <script>
+    const card = new URLSearchParams(location.search).get('card');
+    if (card === '1') document.getElementById('card2').remove();
+    if (card === '2') document.getElementById('card1').remove();
+  </script>
+</body>
+</html>
