@@ -17,15 +17,40 @@ It helps creators with real expertise or an existing business turn evidence, aud
 
 Use it when you have professional experience or a business foundation, but your content feels scattered or disconnected from your work.
 
-## Install
+## Install across compatible agents
 
-The installable skill is located at:
+This project follows the open [Agent Skills specification](https://agentskills.io/) and has been verified as discoverable by the universal `skills` installer.
 
-```text
-skills/hedy-content-positioning
+With Node.js installed, run:
+
+```bash
+npx skills add HedyZhang00/hedy-content-positioning --skill hedy-content-positioning -g
 ```
 
-Give the repository URL to a Codex environment that supports Agent Skills and ask it to install that directory.
+The installer can detect or prompt for compatible agents, including Codex, Claude Code, Cursor, GitHub Copilot, and OpenCode.
+
+To target a specific agent:
+
+```bash
+# Codex
+npx skills add HedyZhang00/hedy-content-positioning --skill hedy-content-positioning -g -a codex
+
+# Claude Code
+npx skills add HedyZhang00/hedy-content-positioning --skill hedy-content-positioning -g -a claude-code
+
+# Cursor
+npx skills add HedyZhang00/hedy-content-positioning --skill hedy-content-positioning -g -a cursor
+```
+
+To install it for every supported agent detected on the computer:
+
+```bash
+npx skills add HedyZhang00/hedy-content-positioning --skill hedy-content-positioning -g --agent '*'
+```
+
+Restart the agent or open a new conversation after installation. Products that do not support the Agent Skills standard may require a different extension mechanism.
+
+For manual installation, copy `skills/hedy-content-positioning` into the target agent's Skills directory.
 
 ## Invoke
 

@@ -34,21 +34,46 @@ An interview-driven Agent Skill for solo business owners who need a clear, testa
 4. 每条主线的边界和选题方向；
 5. 一份 7 天验证计划。
 
-## 安装
+## 安装到主流 Agent
 
-可安装的 Skill 位于：
+本项目遵循开放的 [Agent Skills 规范](https://agentskills.io/)，并已通过通用 `skills` 安装器的识别测试。
 
-```text
-skills/hedy-content-positioning
+只要电脑已经安装 Node.js，就可以用一条命令安装：
+
+```bash
+npx skills add HedyZhang00/hedy-content-positioning --skill hedy-content-positioning -g
 ```
 
-在支持 Agent Skills 的 Codex 中，可以把本仓库链接发给 Codex，并说：
+安装器会识别或询问你正在使用的 Agent。它支持 Codex、Claude Code、Cursor、GitHub Copilot、OpenCode 等兼容 Agent Skills 的工具。
 
-```text
-请安装这个仓库中 skills/hedy-content-positioning 目录的 Skill。
+也可以明确指定 Agent：
+
+```bash
+# Codex
+npx skills add HedyZhang00/hedy-content-positioning --skill hedy-content-positioning -g -a codex
+
+# Claude Code
+npx skills add HedyZhang00/hedy-content-positioning --skill hedy-content-positioning -g -a claude-code
+
+# Cursor
+npx skills add HedyZhang00/hedy-content-positioning --skill hedy-content-positioning -g -a cursor
+
+# GitHub Copilot
+npx skills add HedyZhang00/hedy-content-positioning --skill hedy-content-positioning -g -a github-copilot
+
+# OpenCode
+npx skills add HedyZhang00/hedy-content-positioning --skill hedy-content-positioning -g -a opencode
 ```
 
-也可以下载仓库后，把该目录导入个人 Skills。
+如果希望安装到当前电脑上所有受支持的 Agent：
+
+```bash
+npx skills add HedyZhang00/hedy-content-positioning --skill hedy-content-positioning -g --agent '*'
+```
+
+安装后，请重新打开 Agent 或新建一个对话。对于不支持 Agent Skills 标准的产品，不能保证直接安装。
+
+手动安装时，可下载本仓库并把 `skills/hedy-content-positioning` 目录复制到对应 Agent 的 Skills 目录。
 
 ## 使用
 
