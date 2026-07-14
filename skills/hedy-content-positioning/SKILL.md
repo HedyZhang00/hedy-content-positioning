@@ -1,9 +1,9 @@
 ---
 name: hedy-content-positioning
-description: Use when a creator or solo business owner with expertise or an existing business asks to find a content positioning, decide what to keep talking about, define content pillars, or diagnose scattered content. Trigger on requests such as 帮我找内容定位, 我不知道该持续讲什么, 帮我梳理三条内容主线, or 我的内容很散. Do not use for editing one article, generating titles, or analyzing one post.
+description: Use when an independent professional, creator, solo business owner, or 超级个体 with expertise or an existing business asks to find a content positioning, decide what to keep talking about, define content pillars, or diagnose scattered content. Trigger on requests such as 帮我找内容定位, 我不知道该持续讲什么, 帮我梳理三条内容主线, or 我的内容很散. Do not use for editing one article, generating titles, or analyzing one post.
 ---
 
-# 一人公司内容定位师
+# 超级个体内容定位师
 
 ## 核心原则
 

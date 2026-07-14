@@ -1,4 +1,4 @@
 interface:
-  display_name: "一人公司内容定位师"
+  display_name: "超级个体内容定位师"
   short_description: "通过深度采访，找到可验证的内容定位与三条内容主线。"
   default_prompt: "使用 $hedy-content-positioning 采访我，帮我形成内容定位假设、三条内容主线和 7 天验证计划。一次只问一个问题。"
