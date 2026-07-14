@@ -4,7 +4,18 @@
 
 An evidence-driven Agent Skill for solo business owners who need a clear, testable content positioning. It turns real expertise, audience evidence, business goals, and sustainable expression into a positioning card and a 7-day validation card.
 
-> 当前状态：`v0.2.4` 内测版。仓库已通过结构、格式、编码和隐私检查；两张示例卡片已按统一色板、字号、间距、组件和颜色语义规范重新生成，`evals/` 提供公开行为案例，真实用户内测结果仍在持续积累。
+> 当前状态：`v0.2.5` 内测版。仓库已通过结构、格式、编码和隐私检查；两张示例卡片已按统一色板、字号、间距、组件和颜色语义规范重新生成，`evals/` 提供公开行为案例，真实用户内测结果仍在持续积累。
+
+## 最终结果示例
+
+完成逐题访谈、证据梳理和定位候选选择后，Skill 默认会生成下面两张知识卡片。这是一次真实自测的最终结果示例；每个人得到的内容会根据自己的业务、经历、目标用户和已有证据生成，不会照抄本案例。
+
+<p align="center">
+  <a href="assets/examples/hedy-content-positioning-card.png"><img src="assets/examples/hedy-content-positioning-card.png" alt="一人公司内容定位卡最终结果示例" width="48%"></a>
+  <a href="assets/examples/hedy-7-day-validation-card.png"><img src="assets/examples/hedy-7-day-validation-card.png" alt="7天定位验证卡最终结果示例" width="48%"></a>
+</p>
+
+第一张卡片回答“我服务谁、讲什么、为什么是我、内容连接什么业务”；第二张卡片把定位变成 7 天实验，观察目标用户、商业行动和个人能量信号。结果是当前证据下的定位假设，不是终身不变的答案。
 
 ## 它解决什么问题
 
@@ -34,17 +45,6 @@ An evidence-driven Agent Skill for solo business owners who need a clear, testab
 2. **7 天验证行动卡**：七天动作、每条内容要验证的假设、目标用户/商业行动/个人能量信号，以及保留、调整、放弃或降级规则。
 
 结果统一称为“内容定位假设 V1.0”，不是终身结论。
-
-## 真实使用示例
-
-下面是创作者使用 V0.2 完成的第一次真实自测结果。它展示 Skill 最终会交付什么，不代表目标客户中的付费需求已经得到验证。
-
-<p align="center">
-  <a href="assets/examples/hedy-content-positioning-card.png"><img src="assets/examples/hedy-content-positioning-card.png" alt="一人公司内容定位卡示例" width="48%"></a>
-  <a href="assets/examples/hedy-7-day-validation-card.png"><img src="assets/examples/hedy-7-day-validation-card.png" alt="7天定位验证卡示例" width="48%"></a>
-</p>
-
-第一张卡片回答“我服务谁、讲什么、为什么是我、内容连接什么业务”；第二张卡片把定位变成 7 天实验，观察目标用户、商业行动和个人能量信号。
 
 ## 安装到主流 Agent
 

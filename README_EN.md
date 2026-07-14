@@ -2,7 +2,7 @@
 
 An interview-driven Agent Skill for solo business owners who need a clear, testable content positioning.
 
-> Status: `v0.2.4` beta. Repository structure, format, encoding, and privacy checks pass. Both example cards have been regenerated with the fixed palette, type scale, spacing system, component library, and semantic color rules. Real-user behavioral validation is still being collected.
+> Status: `v0.2.5` beta. Repository structure, format, encoding, and privacy checks pass. Both example cards have been regenerated with the fixed palette, type scale, spacing system, component library, and semantic color rules. Real-user behavioral validation is still being collected.
 
 ## What it does
 
@@ -16,9 +16,9 @@ It helps creators with real expertise or an existing business turn evidence, aud
 
 The result is a testable “Content Positioning Hypothesis V1.0,” not a permanent identity claim. Version 0.2 also includes conditional audits for existing accounts and long-term expression energy.
 
-## Example output
+## Final output example
 
-These cards come from the creator's first real self-test. They demonstrate the final deliverable, but do not claim that paid demand among the target audience has already been validated.
+After the interview, evidence review, and positioning choice, the Skill produces the two cards below by default. They come from one real self-test; each user receives different content based on their business, experience, audience, and evidence.
 
 <p align="center">
   <a href="assets/examples/hedy-content-positioning-card.png"><img src="assets/examples/hedy-content-positioning-card.png" alt="Content positioning card example" width="48%"></a>
