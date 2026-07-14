@@ -4,7 +4,7 @@
 
 An evidence-driven Agent Skill for solo business owners who need a clear, testable content positioning. It turns real expertise, audience evidence, business goals, and sustainable expression into a positioning card and a 7-day validation card.
 
-> 当前状态：`v0.2.1` 内测版。仓库已通过结构、格式、编码和隐私检查；`evals/` 提供公开行为案例，真实用户内测结果仍在持续积累。
+> 当前状态：`v0.2.2` 内测版。仓库已通过结构、格式、编码和隐私检查；知识卡片视觉已按新的编辑式排版模板升级，`evals/` 提供公开行为案例，真实用户内测结果仍在持续积累。
 
 ## 它解决什么问题
 
