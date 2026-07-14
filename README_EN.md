@@ -2,16 +2,19 @@
 
 An interview-driven Agent Skill for solo business owners who need a clear, testable content positioning.
 
-> Status: `v0.1.0` beta. Repository structure, format, encoding, and privacy checks pass. Real-user behavioral validation is still being collected.
+> Status: `v0.2.0` beta. Repository structure, format, encoding, and privacy checks pass. Real-user behavioral validation is still being collected.
 
 ## What it does
 
-It helps creators with real expertise or an existing business turn evidence, audience needs, and business goals into:
+It helps creators with real expertise or an existing business turn evidence, audience needs, business goals, and sustainable expression into:
 
-- one positioning hypothesis;
-- one priority audience;
-- three distinct content pillars;
-- a 7-day validation plan.
+- one concise content positioning card;
+- one 7-day validation action card;
+- one priority audience and one central content line;
+- a lightweight business-connection hypothesis;
+- retain, adjust, or downgrade/stop decision rules.
+
+The result is a testable “Content Positioning Hypothesis V1.0,” not a permanent identity claim. Version 0.2 also includes conditional audits for existing accounts and long-term expression energy.
 
 ## Who it is for
 
@@ -60,7 +63,7 @@ $hedy-content-positioning
 
 ## Language note
 
-Version 0.1.0 is designed and evaluated primarily for Chinese interviews and Chinese content strategy. The English README explains the project but does not claim equivalent English-language evaluation.
+Version 0.2.0 is designed and evaluated primarily for Chinese interviews and Chinese content strategy. The English README explains the project but does not claim equivalent English-language evaluation.
 
 ## License
 
